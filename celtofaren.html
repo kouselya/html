@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num">
+    <button onclick="myFun()">To_farenheit</button>
+    <button onclick="myFun1()">To_celcius</button>
+    <p id="demo"></p>
+    <script>
+        function myFun(){
+            var x= document.getElementById("num").value;
+            x=parseInt((x*9/5)+32);
+            document.getElementById("demo").innerHTML=x;  
+            document.getElementById("num").value="";         
+        }
+        function myFun1(){
+            var x= document.getElementById("num").value;
+            x=x-32;
+            x=parseInt(x*(5/9));
+            document.getElementById("demo").innerHTML=x;
+            document.getElementById("num").value="";
+        }
+
+    </script>
+</body>
+</html>

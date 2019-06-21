@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num">
+    <button onclick="myFun()">Armstrong or not?</button>
+    <p id="demo"></p>
+<script>
+    function myFun() {
+        var x=document.getElementById("num").value;
+        var y=x.length;
+        var z=x,sum=0;
+        while(x!=0){
+            digit=x%10;
+            sum = sum+Math.pow(digit,y);
+            x=parseInt(x/10);
+           // console.log(sum);
+        }
+        x="";
+        if(sum == z)
+        document.getElementById("demo").innerHTML="Armstrong";
+        else
+        document.getElementById("demo").innerHTML="Not Armstrong";
+     
+    }
+</script>
+</body>
+</html>
